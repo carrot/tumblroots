@@ -1,0 +1,25 @@
+!!!
+html
+  head
+    include _meta
+
+    //- Declare values to be used within the theme.
+    //- Values are easily customized through Tumblr interface
+    include _tumblr_vars
+
+  body
+    include _header
+
+    | {block:IndexPage}
+    .IndexPage
+      block content
+    | {/block:IndexPage}
+
+    | {block:PermalinkPage}
+    .PermalinkPage
+      block content
+    | {/block:PermalinkPage}
+
+    include _footer
+
+    script(data-main="js/main", src="js/require.js")

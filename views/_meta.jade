@@ -1,0 +1,24 @@
+//- meta values
+meta(charset='utf8')
+meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+meta(name="viewport", content="width=device-width, initial-scale=1")
+| {block:Description}
+meta(name="description", content="{MetaDescription}")
+| {/block:Description}
+meta(name='author', content="{Title}")
+
+//- site title
+title {Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}
+
+//- additional config
+link(rel="shortcut icon", href="{Favicon}")
+link(rel="apple-touch-icon", href="{PortraitURL-128}")
+link(rel="alternate", type="application/rss+xml", href="{RSS}")
+
+//- stylesheet
+link(rel='stylesheet', href='/css/master.css')
+
+//- head-approved js scripts (i.e. modernizr)
+script(src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js")
+
+
