@@ -18,13 +18,13 @@ Tumblroots aims at building tumblr themes with ease. By leveraging the power of 
 
 - [`views/index.jade`](/views/index.jade) The compiled output of this folder will serve as your Tumblr source.
 
-- [`views/<index|permalink>_content.jade`](/views/index/_content.jade) - Contains all content types per specific Tumblr state (Index or Permalink)
+- [`views/index/_content.jade`](/views/index/_content.jade) | [`views/permalink/_content.jade`](/views/permalink/_content.jade) - Contains all content types per specific Tumblr state (Index or Permalink)
 
 - [`views/tumblr_types/<type>`](/views/tumblr_types) - Holds markup for a specific type (i.e. Photo)
   - Generally, you'll want to include an `_index.jade` and a `_permalink.jade` for each content type. These will map to their corresponding `IndexPage` and `PermalinkPage` respectively.
   - Add/remove tumblr content types as is needed. Reference the Tumblr docs for more information on any given content types and their associated variables.
 
-  Example: Adding a `panorama` content type to [Permalink](/views/permalink) content
+  Example: Adding a `panorama` content type to [Permalink](/views/permalink) pages
   ```jade
   //- Panorama Posts
 
@@ -44,8 +44,8 @@ Until a better solution surfaces, it is advisable to follow these steps when dep
 
 - compile project (`roots compile`)
 - extract assets (images, stylesheets, js, etc) to an S3 bucket
-- copy contents of `public/index.html` with local assets pointing to their S3 equivalents (a global find and replace will suffice)
-- manually paste this `.html` theme into the `Customize > Edit HTML` editor
+  - with `public/master.css` in particular, be sure to correctly point any local assets to the S3 bucket -- a global find and replace should accomplish this.
+- copy contents of `public/index.html` with local assets pointing to their S3 equivalents and manually paste this into your Tumblr's `Customize > Edit HTML` editor
 
 ### Tumblr Theme Resources
 - Tumblr Custom Theme "API" Docs
