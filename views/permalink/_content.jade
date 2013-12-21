@@ -1,0 +1,58 @@
+section.post
+  | {block:Posts}
+
+  //- Text Post
+
+  | {block:Text}
+
+  li.post.text
+    include ../tumblr_types/text/_permalink
+
+  | {/block:Text}
+
+  //- Photo Post
+
+  | {block:Photo}
+
+  li.post.text
+    include ../tumblr_types/photo/_permalink
+
+  | {/block:Photo}
+
+  //- Video Post
+
+  | {block:Video}
+
+  li.post.text
+    include ../tumblr_types/video/_permalink
+
+  | {/block:Video}
+
+  //- Audio Post
+
+  | {block:Audio}
+
+  li.post.text
+    include ../tumblr_types/audio/_permalink
+
+  | {/block:Audio}
+
+  //- Quote Post
+
+  | {block:Quote}
+
+  li.post.text
+    include ../tumblr_types/quote/_permalink
+
+  | {/block:Quote}
+
+  //- Link Post
+
+  | {block:Link}
+
+  li.post.text
+    include ../tumblr_types/link/_permalink
+
+  | {/block:Link}
+
+  | {/block:Posts}

@@ -10,15 +10,7 @@ html
   body
     include _header
 
-    | {block:IndexPage}
-    .IndexPage
-      block content
-    | {/block:IndexPage}
-
-    | {block:PermalinkPage}
-    .PermalinkPage
-      block content
-    | {/block:PermalinkPage}
+    block content
 
     include _footer
 

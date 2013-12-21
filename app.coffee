@@ -1,4 +1,4 @@
 # roots v2.1.0
 
-ignore_files: ['_*', 'readme*', '.gitignore', '.DS_Store']
-ignore_folders: ['.git', 'layouts']
+ignore_files: ['_*', 'README*', '.gitignore', '.DS_Store', 'layout.jade']
+ignore_folders: ['.git', 'layouts', 'permalink', 'index']

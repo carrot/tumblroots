@@ -1,4 +1,12 @@
 extends layout
 
 block content
-  include _content
+  | {block:IndexPage}
+  .IndexPage
+    include index/_content
+  | {/block:IndexPage}
+
+  | {block:PermalinkPage}
+  .PermalinkPage
+    include permalink/_content
+  | {/block:PermalinkPage}
